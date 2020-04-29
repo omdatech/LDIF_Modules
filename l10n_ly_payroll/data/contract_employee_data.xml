@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <!-- Rules -->
+        <record id="contract_employee_structure_rule_basic" model="hr.salary.rule">
+            <field name="name">Basic</field>
+            <field name="sequence" eval="1"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">BASIC</field>
+            <field name="category_id" ref="hr_payroll.BASIC"/>
+            <field name="amount_python_compute">
+health_ins =  employee.company_id.health_insurance_rate * employee.total_family
+if not employee.company_id.health_insurance_applicabe: health_ins = 0.00
+if ((contract.wage - 0.05*employee.family_allowance + health_ins)/0.8763) >= ((1000.0 + employee.family_allowance)/0.9525):
+    result = (contract.wage - 0.1 * employee.family_allowance + health_ins - 50.00)/0.828675
+else:
+    result = (contract.wage - 0.05 * employee.family_allowance + health_ins)/0.8763
+            </field>
+            <field name="struct_id" ref="contract_employee"/>
+        </record>
+
+        <record id="contract_employee_structure_rule_GROSS" model="hr.salary.rule">
+            <field name="name">Gross</field>
+            <field name="sequence" eval="100"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">GROSS</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = categories.BASIC + categories.ALW</field>
+        </record>
+
+        <!-- Deduction -->
+        <record id="contract_employee_structure_rule_EPF" model="hr.salary.rule">
+            <field name="name">Employee Pension fund contribution</field>
+            <field name="sequence" eval="110"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = not employee.retired_employee</field>
+            <field name="amount_select">code</field>
+            <field name="code">EPF</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = categories.GROSS * -0.0100 * employee.get_pf_employee_rate()</field>
+        </record>
+        <record id="contract_employee_structure_rule_TDTAX" model="hr.salary.rule">
+            <field name="name">Tadamon Tax</field>
+            <field name="sequence" eval="111"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.tadamon_tax_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">TDTAX</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = categories.GROSS * employee.company_id.tadamon_tax * -0.0100</field>
+        </record>
+        <record id="contract_employee_structure_rule_JHDTX" model="hr.salary.rule">
+            <field name="name">Jhad Tax</field>
+            <field name="sequence" eval="112"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.jhad_tax_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">JHDTX</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+result = categories.GROSS
+try:
+    result+=EPF
+except:
+    pass
+try:
+    result+=TDTAX
+except:
+    pass
+result = result * employee.company_id.get_jhad_tax() * -0.0100]]>
+            </field>
+        </record>
+        <record id="contract_employee_structure_rule_IT" model="hr.salary.rule">
+            <field name="name">Income Tax</field>
+            <field name="sequence" eval="113"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.income_deduction</field>
+            <field name="amount_select">code</field>
+            <field name="code">IT</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+base = categories.GROSS
+try:
+    base +=TDTAX
+except:
+    pass
+try:
+    base += EPF
+except:
+    pass
+base = base - employee.family_allowance
+if base <=1000.00:
+    result = employee.company_id.upto_1000_deduction * 0.0100 * base
+else:
+    result = (employee.company_id.upto_1000_deduction * 0.0100 * 1000.00) + ((base - 1000.00) * employee.company_id.above_1000_deduction * 0.0100)
+result = result * -1.00
+            ]]> </field>
+        </record>
+
+        <record id="contract_employee_structure_rule_INS" model="hr.salary.rule">
+            <field name="name">Health Insurance</field>
+            <field name="sequence" eval="114"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.health_insurance_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">INS</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = employee.company_id.health_insurance_rate * employee.total_family * -1.000</field>
+        </record>
+
+        <!-- NET SALARY -->
+
+        <record id="contract_employee_structure_rule_NET" model="hr.salary.rule">
+            <field name="name">Net</field>
+            <field name="sequence" eval="200"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">NET</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = categories.BASIC + categories.DED</field>
+        </record>
+
+        <!-- Contribuation -->
+
+        <record id="contract_employee_rule_ErPF" model="hr.salary.rule">
+            <field name="name">PF Employer primume</field>
+            <field name="sequence" eval="210"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = not employee.retired_employee</field>
+            <field name="amount_select">code</field>
+            <field name="code">ErPF</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = categories.GROSS * employee.get_pf_employer_rate()* -0.0100</field>
+        </record>
+
+        <record id="contract_employee_rule_TM" model="hr.salary.rule">
+            <field name="name">Payment TAX</field>
+            <field name="sequence" eval="211"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">TM</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="struct_id" ref="contract_employee"/>
+            <field name="amount_python_compute">result = (JHDTX + IT) * -0.005</field>
+<!--            <field name="partner_id" ref=" "/>-->
+        </record>
+
+
+    </data>
+</odoo>

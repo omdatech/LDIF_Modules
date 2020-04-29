@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_holidays.holiday_status_cl" model="hr.leave.type">
+            <field name="name">إجازة سنوية</field>
+        </record>
+
+        <!-- Sick leave -->
+        <record id="hr_holidays.holiday_status_sl" model="hr.leave.type">
+            <field name="name">إجازة مرضية</field>
+        </record>
+
+        <!-- Compensatory Days -->
+        <record id="holiday_status_emergency" model="hr.leave.type">
+            <field name="name">إجازة طارئة</field>
+            <field name="allocation_type">fixed_allocation</field>
+            <field name="validation_type">no_validation</field>
+            <field name="request_unit">day</field>
+            <field name="color_name">lavender</field>
+            <field name="validity_start" eval="False"/>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!-- Marriage -->
+        <record id="holiday_status_marriage" model="hr.leave.type">
+            <field name="name">إجازة خاصة: زواج</field>
+            <field name="allocation_type">fixed_allocation</field>
+            <field name="validation_type">manager</field>
+            <field name="request_unit">day</field>
+            <field name="color_name">lavender</field>
+            <field name="validity_start" eval="False"/>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!-- Haj -->
+        <record id="holiday_status_Haj" model="hr.leave.type">
+            <field name="name">إجازة خاصة: الحج</field>
+            <field name="allocation_type">fixed_allocation</field>
+            <field name="validation_type">manager</field>
+            <field name="request_unit">day</field>
+            <field name="color_name">lavender</field>
+            <field name="validity_start" eval="False"/>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!-- Death of Husband -->
+        <record id="holiday_status_demise" model="hr.leave.type">
+            <field name="name">إجازة خاصة: وفاة الزوج</field>
+            <field name="allocation_type">fixed_allocation</field>
+            <field name="validation_type">manager</field>
+            <field name="request_unit">day</field>
+            <field name="color_name">lavender</field>
+            <field name="validity_start" eval="False"/>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+        <!-- Exams -->
+        <record id="holiday_status_Haj" model="hr.leave.type">
+            <field name="name">إجازة خاصة: إمتحانات</field>
+            <field name="allocation_type">fixed_allocation</field>
+            <field name="validation_type">hr</field>
+            <field name="request_unit">day</field>
+            <field name="color_name">lavender</field>
+            <field name="validity_start" eval="False"/>
+            <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+            <field name="responsible_id" ref="base.user_admin"/>
+        </record>
+
+
+    </data>
+</odoo>

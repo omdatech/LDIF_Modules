@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_contract_view_form_payroll_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.view.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_payroll.hr_contract_form_inherit"/>
+            <field name="arch" type="xml">
+                <field name="structure_type_id" position="replace">
+                    <field name="structure_type_id" options="{'no_open':True,'no_create': True}"/>
+                    <field name="show_wage" invisible="1"/>
+                </field>
+                <xpath expr="//page[@name='information_salary_hourly']/group/group/label[@for='wage']" position="replace">
+                    <label for="wage" attrs="{'invisible': [('show_wage', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//page[@name='information_salary_hourly']/group/group/div[@name='wage']" position="replace">
+                    <div class="o_row" name="wage" attrs="{'invisible': [('show_wage', '=', False)]}">
+                        <field name="hourly_wage" nolabel="1"/>
+                        <span>/ hour</span>
+                    </div>
+
+                </xpath>
+
+                <xpath expr="//page[@name='information']/group/group/label[@for='wage']" position="replace">
+                    <label for="wage" attrs="{'invisible': [('show_wage', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//page[@name='information']/group/group/div[@name='wage']" position="replace">
+                    <div class="o_row" name="wage" attrs="{'invisible': [('show_wage', '=', False)]}">
+                        <field name="wage" nolabel="1"/>
+                        <span>/ month</span>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="payroll_hr_work_entry_type_view_form_inherit" model="ir.ui.view">
+            <field name="name">payroll.hr.work.entry.type.view.form.inherit</field>
+            <field name="model">hr.work.entry.type</field>
+            <field name="inherit_id" ref="hr_payroll.payroll_hr_work_entry_type_view_form_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group/field[@name='is_unforeseen']" position="after">
+                    <field name="is_overtime"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_payroll_structure_type_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.payroll.structure.type.inherit</field>
+            <field name="model">hr.payroll.structure.type</field>
+            <field name="inherit_id" ref="hr_payroll.hr_payroll_structure_type_view_form"/>
+            <field name="arch" type="xml">
+                <field name="wage_type" position="after">
+                    <field name="show_wage"/>
+                </field>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+

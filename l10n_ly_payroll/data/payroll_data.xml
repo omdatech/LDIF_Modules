@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+         <!-- OTHER INPUTS -->
+        <record id="structure_OTHERALW_type" model="hr.payslip.input.type">
+            <field name="name">Other Allowance</field>
+            <field name="code">OTHERALW</field>
+        </record>
+        <record id="structure_INSALW_type" model="hr.payslip.input.type">
+            <field name="name">Incentives</field>
+            <field name="code">INSALW</field>
+        </record>
+        <record id="structure_OTHERDED_type" model="hr.payslip.input.type">
+            <field name="name">Other Deduction</field>
+            <field name="code">OTHERDED</field>
+        </record>
+        <record id="structure_OT_type" model="hr.payslip.input.type">
+            <field name="name">OverTime (Hours)</field>
+            <field name="code">OT</field>
+        </record>
+        <record id="structure_EXPENSES_type" model="hr.payslip.input">
+            <field name="name">Expenses</field>
+            <field name="code">EX</field>
+        </record>
+
+        <!-- structure type -->
+        <record id="contract_employee_type" model="hr.payroll.structure.type">
+            <field name="name">Consultant Contract</field>
+            <field name="country_id" eval="False"/>
+            <field name="show_wage" eval="True"/>
+        </record>
+        <!-- Structure -->
+        <record id="contract_employee" model="hr.payroll.structure">
+            <field name="name">Consultant Contract</field>
+            <field name="type_id" ref="contract_employee_type"/>
+            <field name="regular_pay" eval="True"/>
+            <field name="country_id" eval="False"/>
+            <field name="rule_ids" eval="[(6, 0, [])]"/>
+            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+        </record>
+
+        
+        <!-- structure type -->
+        <record id="full_time_employee_type" model="hr.payroll.structure.type">
+            <field name="name">Full Time Employment Type</field>
+            <field name="country_id" eval="False"/>
+        </record>
+        <!-- Structure -->
+        <record id="full_time_employee" model="hr.payroll.structure">
+            <field name="name">Full Time Employee</field>
+            <field name="type_id" ref="full_time_employee_type"/>
+            <field name="regular_pay" eval="True"/>
+            <field name="country_id" eval="False"/>
+            <field name="rule_ids" eval="[(6, 0, [])]"/>
+            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+        </record>
+        
+        <!-- structure type -->
+        <record id="limited_full_time_employee_type" model="hr.payroll.structure.type">
+            <field name="name">Limited Full Time Employment Type</field>
+            <field name="country_id" eval="False"/>
+        </record>
+        <!-- Structure -->
+        <record id="limited_full_time_employee" model="hr.payroll.structure">
+            <field name="name">Limited Full Time Employee</field>
+            <field name="type_id" ref="limited_full_time_employee_type"/>
+            <field name="regular_pay" eval="True"/>
+            <field name="country_id" eval="False"/>
+            <field name="rule_ids" eval="[(6, 0, [])]"/>
+            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+        </record>
+
+        <!-- structure type -->
+        <record id="unlimited_full_time_employee_type" model="hr.payroll.structure.type">
+            <field name="name">Unimited Full Time Employment Type</field>
+            <field name="country_id" eval="False"/>
+        </record>
+        <!-- Structure -->
+        <record id="unlimited_full_time_employee" model="hr.payroll.structure">
+            <field name="name">Unlimited Full Time Employee</field>
+            <field name="type_id" ref="unlimited_full_time_employee_type"/>
+            <field name="regular_pay" eval="True"/>
+            <field name="country_id" eval="False"/>
+            <field name="rule_ids" eval="[(6, 0, [])]"/>
+            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+        </record>
+
+    </data>
+</odoo>

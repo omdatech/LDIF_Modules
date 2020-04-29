@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_loan,employee.loan,model_employee_loan,base.group_user,1,0,0,0
+access_hr_loan_installement,loan.installement,model_loan_installement,base.group_user,1,0,0,0
+access_employee_loan_manager,employee.loan,model_employee_loan,hr.group_hr_user,1,1,1,1
+access_hr_loan_installement_manager,loan.installement,model_loan_installement,hr.group_hr_user,1,1,1,1

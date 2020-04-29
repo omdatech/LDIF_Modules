@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record model="res.country.state" id="state_ly_TR">
+            <field name="code" ref="TRI"/>
+            <field name="country_id" ref="base.ly"/>
+            <field name="name" ref="طرابلس الكبرى"/>
+        </record>
+        <record model="res.country.state" id="state_ly_BN">
+            <field name="code" ref="BAN"/>
+            <field name="country_id" ref="base.ly"/>
+            <field name="name" ref="بنغازى الكبرى"/>
+        </record>
+
+        <!--        ِAdd Banks names as Banks-->
+        <record model="res.bank" id="bank_LCB">
+            <field name="name">مصرف ليبيا المركزي</field>
+            <field name="bic">LCB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">المدينة القديمة</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@LCB.gov.ly</field>
+			<field name="image_1920" type="base64" file="l10n_ly_payroll/static/img/Central_Bank.png"/>
+        </record>
+        <record model="res.bank" id="bank_JUB">
+            <field name="name">مصرف الجمهورية</field>
+            <field name="bic">JUB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">امحمد المقريف</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@JUB.gov.ly</field>
+			<field name="image_1920" type="base64" file="l10n_ly_payroll/static/img/Jumhouria_Bank_Logo.png"/>
+        </record>
+        <record model="res.bank" id="bank_NCB">
+            <field name="name">مصرف التجاري الوطني</field>
+            <field name="bic">NCB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">24 ديسمبر</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@NCB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_WDB">
+            <field name="name">مصرف الوحدة</field>
+            <field name="bic">WDB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">الصابرى</field>
+            <field name="street2">بنغازى المركز</field>
+            <field name="city">بنغازى</field>
+            <field name="phone">054119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_BN"/>
+            <field name="email">info@WDB.gov.ly</field>
+			<field name="image_1920" type="base64" file="l10n_ly_payroll/static/img/Wahda_Bank_Logo.png"/>
+        </record>
+        <record model="res.bank" id="bank_SHB">
+            <field name="name">مصرف الصحارى</field>
+            <field name="bic">SHB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">امحمد المقريف</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@SHB.gov.ly</field>
+			<field name="image_1920" type="base64" file="l10n_ly_payroll/static/img/Sahari_Bank_Logo.png"/>
+        </record>
+        <record model="res.bank" id="bank_TDB">
+            <field name="name">مصرف التجارة والتنمية</field>
+            <field name="bic">TDB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">الصابرى</field>
+            <field name="street2">بنغازى المركز</field>
+            <field name="city">بنغازى</field>
+            <field name="phone">054119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_BN"/>
+            <field name="email">info@TDB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_NAB">
+            <field name="name">مصرف شمال افريقيا</field>
+            <field name="bic">NAB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">الصابرى</field>
+            <field name="street2">بنغازى المركز</field>
+            <field name="city">بنغازى</field>
+            <field name="phone">054119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_BN"/>
+            <field name="email">info@NAB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_AMB">
+            <field name="name">مصرف الامان</field>
+            <field name="bic">AMB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">السياحية</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@AMB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_FLB">
+            <field name="name">مصرف الليبي الخارجي</field>
+            <field name="bic">FLB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">ذات العماد</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@FLB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_WHB">
+            <field name="name">مصرف الواحة</field>
+            <field name="bic">WHB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@WHB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_AEK">
+            <field name="name">مصرف الاجماع العربي</field>
+            <field name="bic">AEK</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@AEK.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_FGB">
+            <field name="name">مصرف الخليج الاول</field>
+            <field name="bic">FGB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">طريق السكة</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@FGB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_UNB">
+            <field name="name">مصرف المتحد</field>
+            <field name="bic">UNB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@UNB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_WFB">
+            <field name="name">مصرف الوفاء</field>
+            <field name="bic">WFB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@WFB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_ATB">
+            <field name="name">مصرف التجاري العربي</field>
+            <field name="bic">ATB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@ATB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_MOB">
+            <field name="name">مصرف المتوسط</field>
+            <field name="bic">MOB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">برج طرابلسر</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@MOB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_SRB">
+            <field name="name">مصرف السراي</field>
+            <field name="bic">SRB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">عمر المختار</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@SRB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_NUB">
+            <field name="name">مصرف النوران</field>
+            <field name="bic">NUB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">برج طرابلس</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@NUB.gov.ly</field>
+        </record>
+        <record model="res.bank" id="bank_YKB">
+            <field name="name">مصرف اليقين</field>
+            <field name="bic">YKB</field>
+            <field name="country" ref="base.ly"/>
+            <field name="zip">N/A</field>
+            <field name="street">برج طرابلس</field>
+            <field name="street2">طرابلس المركز</field>
+            <field name="city">طرابلس</field>
+            <field name="phone">021119911991</field>
+            <field name="active">TRUE	</field>
+            <field name="state" ref="state_ly_TR"/>
+            <field name="email">info@YKB.gov.ly</field>
+        </record>
+
+<!--        add Banks as partners -->
+<!--        <record id="main_partner_bank_LCB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_LCB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_JUB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_JUB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_NCB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_NCB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_WDB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_WDB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_SHB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_SHB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_TDB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_TDB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_NAB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_NAB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_AMB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_AMB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_FLB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_FLB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_WHB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_WHB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_AEK" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_AEK"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_FGB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_FGB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_UNB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_UNB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_WFB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_WFB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_ATB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_ATB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_MOB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_MOB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_SRB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_SRB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_NUB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_NUB"/>-->
+<!--        </record>-->
+<!--        <record id="main_partner_bank_YKB" model="res.partner">-->
+<!--            <field name="company_id" ref="bank_YKB"/>-->
+<!--        </record>-->
+
+    </data>
+</odoo>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="view_employee_form_inherited" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[@name='hr_settings']/group/group[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//notebook/page[@name='hr_settings']/group/group[@name='identification_group']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//notebook/page[@name='hr_settings']/group" position="inside">
+                    <group string="HR Status">
+                        <field name="doj" required="1"/>
+                        <field name="actual_doj" required="1"/>
+                        <field name="emp_degree" options="{'no_open':True,'no_create': True}" required="1"/>
+                        <field name="years_degree" required="1"/>
+                        <field name="performance_last" widget="selection" required="1"/>
+                        <field name="degree_note"/>
+                    </group>
+                    <group>
+                    </group>
+                    <group string='Status' name="active_group">
+                        <field name="user_id" string="Related User"/>
+                    </group>
+                    <group string="Attendance" name="identification_group">
+                        <field name="pin" string="PIN Code"/>
+                        <label for="barcode"/>
+                        <div class="o_row">
+                            <field name="barcode"/>
+                            <button string="Generate" class="btn btn-link" type="object" name="generate_random_barcode" attrs="{'invisible': [('barcode', '!=', False)]}"/>
+                            <button name="%(hr.hr_employee_print_badge)d" string="Print Badge" class="btn btn-link" type="action" attrs="{'invisible': [('barcode', '=', False)]}"/>
+                        </div>
+                    </group>
+
+                </xpath>
+                <field name="parent_id" position="after">
+                    <field name="employment_type"/>
+                </field>
+
+                <field name="registration_number" position="after">
+                    <field name="retired_employee"/>
+                </field>
+                
+                
+
+                <xpath expr="//notebook/page[@name='personal_information']/group/group[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='personal_information']/group/group[4]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='personal_information']/group/group[7]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[@name='hr_settings']" position="after">
+                    <page string="Family Information">
+                        <group>
+                            <group string="Marital Status">
+                                <field name="marital"/>
+                                <field name="eligible_family_exempt"/>
+                                <field name="salary_table_obj"  invisible="1"/>
+                                <field name="last_performace_obj"  invisible="1"/>
+                                <field name="include_employee"/>
+                            </group>
+                        </group>
+                        <field name="family_ids">
+                            <tree string="Family" editable="bottom">
+                                <field name="name"/>
+                                <field name="relationship"/>
+                                <field name="national_id"/>
+                                <field name="dob"/>
+                                <field name="contact_no"/>
+                                <field name="insurance_eligible"/>
+                            </tree>
+                            <form string="Family Info">
+                                <group>
+                                    <field name="name"/>
+                                    <field name="relationship"/>
+                                    <field name="national_id"/>
+                                    <field name="dob"/>
+                                    <field name="contact_no"/>
+                                    <field name="insurance_eligible"/>
+                                </group>
+                            </form>
+                        </field>
+                         <group>
+                            <field name="no_family" readonly="1"/>
+                            <field name="total_family" readonly="1"/>
+                        </group>
+                    </page>
+                    <page string="Monthly Allowances">
+                        <group>
+                            <group string="Monthly Allowances">
+                                <field name="chk_position_allowance" attrs="{'invisible': [('position_allowance','=', False)]}"/>
+                                <field name="chk_transport_allowance" attrs="{'invisible': [('transport_allowance','=', False)]}"/>
+                                <field name="chk_fuel_allowance" attrs="{'invisible': [('fuel_allowance','=', False)]}"/>
+                                <field name="chk_calling_allowance" attrs="{'invisible': [('calling_allowance','=', False)]}"/>
+                                <field name="chk_clothes_allowance" attrs="{'invisible': [('clothes_allowance','=', False)]}"/>
+                                <field name="chk_res_allowance" attrs="{'invisible': [('res_allowance','=', False)]}"/>
+                                <field name="chk_fixed_allowance" />
+
+
+
+                                <field name="position_allowance" invisible="1"/>
+                                <field name="transport_allowance" invisible="1"/>
+                                <field name="fuel_allowance" invisible="1"/>
+                                <field name="calling_allowance" invisible="1"/>
+                                <field name="res_allowance" invisible="1"/>
+                                <field name="clothes_allowance" invisible="1"/>
+                                <field name="employee_age" invisible="1"/>
+                            </group>
+                            <group string="Additional Monthly Allowance">
+                                <field name="allowance_id" widget="selection"/>
+                                <field name="monthly_overtime" widget="float_time"/>
+                                <field name="monthly_regular"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+

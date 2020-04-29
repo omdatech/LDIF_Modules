@@ -1,0 +1,814 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_ly_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-08 12:15+0000\n"
+"PO-Revision-Date: 2020-01-08 16:46+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar_SY\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_ABSDED
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_ABSDED
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_ABSDED
+msgid "Absent Deduction"
+msgstr "خصم الغياب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__actual_doj
+msgid "Actual Starting Date"
+msgstr "تاريخ المباشرة"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Additional Monthly Allowance"
+msgstr "بدل شهري إضافي"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule.category,name:l10n_ly_payroll.ALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__allowance_id
+msgid "Allowance"
+msgstr "مكافأة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__name
+msgid "Allowance Name"
+msgstr "اسم البدلات"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Allowance to be included in SSFC Calculation"
+msgstr "يجب تضمينها في احتساب الضمان الاجتماعي SSFC"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Allowance's Name"
+msgstr "اسم البدلات"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__annual_allowance
+msgid "Annual Allowance"
+msgstr "العلاوة السنوية - المربوط"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_annual_alw
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_annual_alw
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_annual_alw
+msgid "Annual Allowance Incentive"
+msgstr "العلاوة السنوية (المربوط)"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Applicable for Job"
+msgstr "ينطبق على الوظيفة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__performance_emp_degree_ids
+msgid "Applicable on Degrees"
+msgstr "ينطبق على الدرجات الوظيفية"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__max_years_appraisal
+msgid "Appraisal Max Years in the degree"
+msgstr "أكثر مدة في الدرجة (سنوات)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__min_years_appraisal
+msgid "Appraisal Min Years in the degree"
+msgstr "أقل مدة في الدرجة (سنوات)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__job_id
+msgid "Associated Job"
+msgstr "وظيفة مرتبطة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__sk_performance_eval__grade__avge
+msgid "Average"
+msgstr "متوسط"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_basic
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_basic
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_basic
+#: model:hr.salary.rule,name:l10n_ly_payroll.other_employee_structure_rule_basic
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_basic
+#: model:hr.salary.rule.category,name:l10n_ly_payroll.BASIC
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__basic
+msgid "Basic"
+msgstr "الأساسي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__calling_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_calling_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__calling_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__calling_allowance
+msgid "Calling Allowance"
+msgstr "بدل الاتصالات والنت"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_CLTALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_CLTALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_CLTALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_clothes_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__clothes_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__clothes_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__clothes_allowance
+msgid "Clothes Allowance"
+msgstr "بدل ملابس"
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__company_id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__company_id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_employee__employment_type__contract
+msgid "Consultant Contract"
+msgstr "عقد استشاري"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__contact_no
+msgid "Contact No"
+msgstr "رقم الاتصال"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_TRANALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_TRANALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_TRANALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__transport_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__transport_allowance
+msgid "Conveyance Allowance"
+msgstr "بدل المركوب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__create_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__create_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__create_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__create_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__create_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__create_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__create_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__create_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__create_date
+msgid "Created on"
+msgstr "أنشأ فى"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__dob
+msgid "Date of Birth"
+msgstr "تاريخ الولادة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__doj
+msgid "Date of First Employment"
+msgstr "تاريخ أول تعيين/توظيف بالدولة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_family__relationship__daughter
+msgid "Daughter"
+msgstr "ابنة"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule.category,name:l10n_ly_payroll.DED
+msgid "Deduction"
+msgstr "المستقطع"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__above_1000_deduction
+msgid "Deduction % Above 1000"
+msgstr "نسبة الخصم من قيمة المرتب (أول 1000 د.ل)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__upto_1000_deduction
+msgid "Deduction % Upto 1000"
+msgstr "نسبة الخصم من قيمة المرتب (بعد 1000 د.ل)"
+
+#. module: l10n_ly_payroll
+#: model:ir.actions.act_window,name:l10n_ly_payroll.action_hr_degree
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__emp_degree
+#: model:ir.ui.menu,name:l10n_ly_payroll.menu_view_hr_degree
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_hr_degree_tree
+msgid "Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__display_name
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__display_name
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__display_name
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__display_name
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__eligible_family_exempt
+msgid "Eligible for Family Exemption"
+msgstr "مؤهل للحصول على إعفاء الأسرة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_employee
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__employee_age
+msgid "Employee Career Age"
+msgstr "العمر الوظيفي للموظف "
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_EPF
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_EPF
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_EPF
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_EPF
+msgid "Employee Pension fund contribution"
+msgstr "مساهمة الموظف في صندوق الضمان الاجتماعي  "
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__employee_pf_cont
+msgid "Employee SSFC %"
+msgstr "نسبة (%) قسط الموظف في الضمان الاجتماعي  SSFC"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__employee_pf_cont_disc
+msgid "Employee SSFC Discount %"
+msgstr "نسبة (%) القسط المخفض للموظف في الضمان الاجتماعي   SSFC"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__employer_pf_cont
+msgid "Employer SSFC %"
+msgstr "نسبة (%) قسط جهة العمل في الضمان الاجتماعي  SSFC"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__employer_pf_cont_disc
+msgid "Employer SSFC DIscount %"
+msgstr "نسبة (%) القسط المخفض لجهة العمل في الضمان الاجتماعي  SSFC "
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__employer_career_age_threshold
+msgid "Employer's Career Age (in years) Threshold for discount eligibility"
+msgstr "الحد الأدنى لأهلية الخصم حسب العمر الوظيفي للموظف (بالسنوات) "
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__employment_type
+msgid "Employment Type"
+msgstr "نوع الوظيفة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__sk_performance_eval__grade__excellent
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Family"
+msgstr "عائلة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__family_allowance
+msgid "Family Allowance"
+msgstr "بدل الأسرة"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Family Info"
+msgstr "معلومات العائلة"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Family Information"
+msgstr "معلومات العائلة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__family_ids
+msgid "Family Members"
+msgstr "أفراد الأسرة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_family__relationship__father
+msgid "Father"
+msgstr "الآب"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_FXALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_FXALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_FXALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_fixed_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__fixed_allowance
+msgid "Fixed Allowance"
+msgstr "بدل ثابت"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_FLALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_FLALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_FLALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_fuel_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__fuel_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__fuel_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__fuel_allowance
+msgid "Fuel Allowance"
+msgstr "بدل الوقود"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_employee__employment_type__full-time
+msgid "Full Time Employee"
+msgstr "موظف بدوام كامل"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__sk_performance_eval__grade__good
+msgid "Good"
+msgstr "جيد"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__grade
+msgid "Grade"
+msgstr "التقييم"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_GROSS
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_GROSS
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_GROSS
+#: model:hr.salary.rule,name:l10n_ly_payroll.other_employee_structure_rule_GROSS
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_GROSS
+#: model:hr.salary.rule.category,name:l10n_ly_payroll.GROSS
+msgid "Gross"
+msgstr "الإجمالي"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "HR Status"
+msgstr "الحالة الوظيفية"
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_work_entry_type
+msgid "HR Work Entry Type"
+msgstr "أنواع مدخلات العمل "
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_INS
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_INS
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_INS
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_INS
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Health Insurance"
+msgstr "تأمين صحي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__health_insurance_applicabe
+msgid "Health Insurance Applicable"
+msgstr "تطبيق التأمين الصحي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__insurance_eligible
+msgid "Health Insurance Eligiblity"
+msgstr "أهلية التأمين الصحي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__health_insurance_rate
+msgid "Health Insurance Rate/Person"
+msgstr "قيمة أقساط التأمين الصحي للشخص"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__overtime_allowance
+msgid "Hourly Rate for Overtime"
+msgstr "قيمة الساعة بالعمل الإضافي"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_RSALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_RSALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_RSALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__res_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__res_allowance
+msgid "House Rent Allowance"
+msgstr "بدل إيجار المنزل"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__id
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__id
+msgid "ID"
+msgstr "الرقم"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_INSALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_INSALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_INSALW
+msgid "Incentives"
+msgstr "حوافز"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__include_employee
+msgid "Include Employee in Health Insurance Premium"
+msgstr "تشمل الموظف في قسط التأمين الصحي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_calling_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_clothes_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_fixed_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_fuel_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_position_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_res_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__inc_transport_allowance
+msgid "Include in SSF Calculation"
+msgstr "تدرج في احتساب قسط الضمان الاجتماعي SSF"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__income_deduction
+msgid "Income Deduction Applicable"
+msgstr "احتساب ضريبة الدخل في المرتب"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Income Deductions"
+msgstr "نسبة (%) خصومات ضريبة الدخل"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_IT
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_IT
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_IT
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_IT
+msgid "Income Tax"
+msgstr "ضريبة الدخل"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_JHDTX
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_JHDTX
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_JHDTX
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_JHDTX
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Jhad Tax"
+msgstr "ضريبة الجهاد"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__jhad_tax
+msgid "Jhad Tax %"
+msgstr "نسبة (%) ضريبة الجهاد"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__jhad_tax_applicabe
+msgid "Jhad Tax Applicable"
+msgstr "احتساب ضريبة الجهاد في خصميات المرتب"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_JBALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_PHNALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_JBALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_PHNALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_JBALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_PHNALW
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_position_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__position_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__position_allowance
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Job Position Allowance"
+msgstr "بدل المنصب (علاوة المسؤولية)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree____last_update
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family____last_update
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval____last_update
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance____last_update
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table____last_update
+msgid "Last Modified on"
+msgstr "اخر تغيير تم في "
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__last_performace_obj
+msgid "Last Performance"
+msgstr "نتيجة تقرير تقييم أداء الموظف الأخير (السنة الماضية)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__performance_applicable
+msgid "Last Performance Evalutation Applicable on Annual Allowance"
+msgstr "يأثر التقييم السنوي الأخير (للسنة الماضية) على العلاوة السنوية للموظف (بضربه في العلاوات السنوية)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__write_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__write_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__write_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__write_uid
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل تم بواسطة "
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__write_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__write_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__write_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__write_date
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_table__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل تم فى"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__performance_last
+msgid "Last year performance evaluation"
+msgstr "التقييم السنوي لأداء الموظف للعام الماضي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_employee__employment_type__limited
+msgid "Limited Full Time Employee"
+msgstr "موظف بدوام كامل (عقد محدود المدة)"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_LOAN
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_LOAN
+msgid "Loan Installment"
+msgstr "قسط القرض الاجتماعي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__emp_degree
+msgid "Managerial Degree"
+msgstr "الدرجة الوظيفية"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_employee_form_inherited
+msgid "Monthly Allowances"
+msgstr "البدلات الشهري"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_family__relationship__mother
+msgid "Mother"
+msgstr "أم"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_degree__name
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__national_id
+msgid "National ID"
+msgstr "الرقم الوطنى"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule.category,name:l10n_ly_payroll.NET
+msgid "Net"
+msgstr "صافي الراتب"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_NET
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_NET
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_NET
+#: model:hr.salary.rule,name:l10n_ly_payroll.other_employee_structure_rule_NET
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_NET
+msgid "Net Salary"
+msgstr "صافي الراتب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__no_family
+msgid "No of Family Members Eligible for Tax Exempt"
+msgstr "عدد أفراد الأسرة المؤهلين للإعفاء الضريبي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__total_family
+msgid "No of Family Members included for Health Insurance Installment"
+msgstr "عدد أفراد الأسرة المشمولين بأقساط التأمين الصحي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__degree_note
+msgid "Note"
+msgstr "ملحوظة"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_OTHERALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_OTHERALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_OTHERALW
+msgid "Other Allowance"
+msgstr "بدلات أخرى"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_OTHERDED
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_OTHERDED
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_OTHERDED
+msgid "Other Deduction"
+msgstr "خصميات أخرى"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_work_entry_type__is_overtime
+msgid "Overtime"
+msgstr "عمل اضافى"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_OTALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_OTALW
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_OTALW
+msgid "Overtime Allowance"
+msgstr "بدل العمل الإضافي"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__pf_discount_applicable
+msgid "PF Contribution Discount System Applicable"
+msgstr "تطبيق نظام القسط المخفض في احتساب الضمان الاجتماعى"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_family__relationship__partner
+msgid "Partner/Spouse"
+msgstr "الشريك / الزوج"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Performace"
+msgstr "الأداء"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__performace_ids
+msgid "Performance"
+msgstr "الأداء"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Performance Evaluation Percentage"
+msgstr "نسبة تقييم الأداء"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__sk_performance_eval__grade__poor
+msgid "Poor"
+msgstr "ضعيف"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__position_allowance
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Position Allowance"
+msgstr "بدل المنصب (علاوة المسؤولية)"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_family__relationship
+msgid "Relationship"
+msgstr "صلة القرابة"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_res_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__res_allowance
+msgid "Residential Allowance"
+msgstr "بدل سكن"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_performance_eval__perf_percent
+msgid "Reward %"
+msgstr "نسبة (%) المكافاة"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Salary"
+msgstr "الراتب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__sal_allowance_ids
+msgid "Salary Allowance"
+msgstr "بدل الراتب"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Salary Configuration"
+msgstr "إعدادات الراتب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "هيكل الراتب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__salary_table_obj
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__sk_salary_table
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Salary Table"
+msgstr "جدول الرواتب"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Social Security Fund Contribution(SSFC):"
+msgstr "مساهمة صندوق الضمان الاجتماعي (SSFC):"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_family__relationship__son
+msgid "Son"
+msgstr "ابن"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Table"
+msgstr "جدول"
+
+#. module: l10n_ly_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_ly_payroll.view_company_form_inherited
+msgid "Tadamon Deductions"
+msgstr "احتساب ضريبة التضامن"
+
+#. module: l10n_ly_payroll
+#: model:hr.salary.rule,name:l10n_ly_payroll.contract_employee_structure_rule_TDTAX
+#: model:hr.salary.rule,name:l10n_ly_payroll.full_structure_rule_TDTAX
+#: model:hr.salary.rule,name:l10n_ly_payroll.limited_structure_rule_TDTAX
+#: model:hr.salary.rule,name:l10n_ly_payroll.unlimited_full_structure_rule_TDTAX
+msgid "Tadamon Tax"
+msgstr "ضريبة التضامن"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__tadamon_tax
+msgid "Tadamon Tax %"
+msgstr "نسبة (%) ضريبة التضامن"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__tadamon_tax_applicabe
+msgid "Tadamon Tax Applicable"
+msgstr "خصم ضريبة التضامن من الراتب"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__chk_transport_allowance
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_sk_sal_allowance__transport_allowance
+msgid "Transport Allowance"
+msgstr "بدل النقل"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__hr_employee__employment_type__unlimited
+msgid "Unlimited Full Time Employee"
+msgstr "غير محدود موظف بدوام كامل"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields.selection,name:l10n_ly_payroll.selection__sk_performance_eval__grade__very
+msgid "Very Good"
+msgstr "جيد جداً"
+
+#. module: l10n_ly_payroll
+#: model:ir.model.fields,field_description:l10n_ly_payroll.field_hr_employee__years_degree
+msgid "Years Since Last Degree"
+msgstr "أقدمية الدرجة الوظيفية الحالية (بالسنوات)"
+
+#. module: l10n_ly_payroll
+#: code:addons/l10n_ly_payroll/models/models.py:0
+#, python-format
+msgid "You cannot create degree with same name: %s"
+msgstr "لا يمكنك تكرار اسم الدرجة : %s"
+
+#. module: l10n_ly_payroll
+#: code:addons/l10n_ly_payroll/models/models.py:0
+#, python-format
+msgid "You cannot create multiple entries for same grade: %s"
+msgstr "لا يمكنك تكرار الادخال لنفس الدرجة : %s"
+
+#. module: l10n_ly_payroll
+#: code:addons/l10n_ly_payroll/models/models.py:0
+#, python-format
+msgid "You cannot create multiple salary rule for one degree: %s"
+msgstr "لا يمكنك تكوين قواعد مرتب متعددة لنفس الدرجة : %s"
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_degree
+msgid "hr.degree"
+msgstr ""
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_hr_family
+msgid "hr.family"
+msgstr ""
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_sk_performance_eval
+msgid "sk.performance.eval"
+msgstr ""
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_sk_sal_allowance
+msgid "sk.sal.allowance"
+msgstr ""
+
+#. module: l10n_ly_payroll
+#: model:ir.model,name:l10n_ly_payroll.model_sk_sal_table
+msgid "sk.sal.table"
+msgstr ""

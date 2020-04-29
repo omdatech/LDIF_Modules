@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_company_form_inherited" model="ir.ui.view">
+            <field name="name">res.company</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Salary Configuration">
+                        <group>
+                            <group string="Allowance to be included in SSFC Calculation">
+                                <field name="position_allowance" />
+                                <field name="inc_position_allowance" attrs="{'invisible': [('position_allowance','=', False)]}"/>
+                                <field name="transport_allowance" />
+                                <field name="inc_transport_allowance" attrs="{'invisible': [('transport_allowance','=', False)]}"/>
+                                <field name="fuel_allowance" />
+                                <field name="inc_fuel_allowance" attrs="{'invisible': [('fuel_allowance','=', False)]}"/>
+                                <field name="calling_allowance" />
+                                <field name="inc_calling_allowance" attrs="{'invisible': [('calling_allowance','=', False)]}"/>
+                                <field name="clothes_allowance" />
+                                <field name="inc_clothes_allowance" attrs="{'invisible': [('clothes_allowance','=', False)]}"/>
+                                <field name="res_allowance"/>
+                                <field name="inc_res_allowance" attrs="{'invisible': [('res_allowance','=', False)]}"/>
+                            </group>
+                            <group string="Social Security Fund Contribution(SSFC):">
+                                <field name="employee_pf_cont" />
+                                <field name="employer_pf_cont" />
+                                <field name="pf_discount_applicable" />
+                                <field name="employer_career_age_threshold"  attrs="{'invisible': [('pf_discount_applicable','=', False)]}"/>
+                                <field name="employee_pf_cont_disc" attrs="{'invisible': [('pf_discount_applicable','=', False)]}"/>
+                                <field name="employer_pf_cont_disc" attrs="{'invisible': [('pf_discount_applicable','=', False)]}"/>
+                            </group>
+                            <group string="Income Deductions">
+                                <field name="income_deduction" />
+                                <field name="upto_1000_deduction" attrs="{'invisible': [('income_deduction','=', False)]}"/>
+                                <field name="above_1000_deduction" attrs="{'invisible': [('income_deduction','=', False)]}"/>
+                            </group>
+                            <group string="Jhad Tax">
+                                <field name="jhad_tax_applicabe" />
+                                <field name="jhad_tax" attrs="{'invisible': [('jhad_tax_applicabe','=', False)]}"/>
+                            </group>
+                            <group string="Tadamon Deductions">
+                                <field name="tadamon_tax_applicabe" />
+                                <field name="tadamon_tax" attrs="{'invisible': [('tadamon_tax_applicabe','=', False)]}"/>
+                            </group>
+                            <group string="Health Insurance">
+                                <field name="health_insurance_applicabe" />
+                                <field name="health_insurance_rate" attrs="{'invisible': [('health_insurance_applicabe','=', False)]}"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Salary Table">
+                        <field name="sk_salary_table" nolabel="1">
+                            <tree string="Salary">
+                                <field name="emp_degree"/>
+                                <field name="basic"/>
+                                <field name="annual_allowance"/>
+                                <field name="min_years_appraisal"/>
+                                <field name="max_years_appraisal"/>
+                            </tree>
+                            <form string="Table">
+                                <sheet>
+                                    <group>
+                                        <group>
+                                             <field name="emp_degree"/>
+                                            <field name="basic"/>
+                                            <field name="annual_allowance"/>
+                                        </group>
+                                        <group>
+                                            <field name="min_years_appraisal"/>
+                                            <field name="max_years_appraisal"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Job Position Allowance">
+                        <field name="sal_allowance_ids" nolabel="1">
+                            <tree string="Position Allowance">
+                                <field name="name"/>
+                                <field name="job_id"/>
+                            </tree>
+                            <form string="Position Allowance">
+                                <sheet>
+                                    <div class="oe_title">
+                                        <h1>
+                                            <field name="name" placeholder="Allowance's Name" required="True"/>
+                                        </h1>
+                                        <h2>
+                                            <field name="job_id" placeholder="Applicable for Job" required="True"/>
+                                        </h2>
+                                    </div>
+                                    <group>
+                                        <group>
+                                            <field name="position_allowance"/>
+                                            <field name="transport_allowance"/>
+                                            <field name="fuel_allowance"/>
+                                            <field name="overtime_allowance"/>
+                                        </group>
+                                        <group>
+                                            <field name="calling_allowance"/>
+                                            <field name="clothes_allowance"/>
+                                            <field name="res_allowance"/>
+                                        </group>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                    <page string="Performance Evaluation Percentage">
+                        <group>
+                            <field name="performance_applicable"/>
+                        </group>
+                        <group attrs="{'invisible': [('performance_applicable','=', False)]}">
+                            <field name="performance_emp_degree_ids" widget="many2many_tags" attrs="{'required': [('performance_applicable','=', True)]}"/>
+                        </group>
+                        <field name="performace_ids"  attrs="{'invisible': [('performance_applicable','=', False)]}">
+                            <tree string="Performace" editable="bottom">
+                                <field name="grade"/>
+                                <field name="perf_percent"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
+

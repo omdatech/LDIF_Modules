@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+ 
+        <!-- Rules -->
+
+        <record id="unlimited_full_structure_rule_basic" model="hr.salary.rule">
+            <field name="name">Basic</field>
+            <field name="sequence">1</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">BASIC</field>
+            <field name="category_id" ref="hr_payroll.BASIC"/>
+<!--            <field name="amount_python_compute">result = hr.contract.wage</field>-->
+            <field name="amount_python_compute">result = employee.salary_table_obj.basic</field>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+        </record>
+
+        <record id="unlimited_full_structure_rule_annual_alw" model="hr.salary.rule">
+            <field name="name">Annual Allowance Incentive</field>
+            <field name="sequence">11</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">ANNALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"> <![CDATA[
+result = employee.salary_table_obj.annual_allowance * min(employee.years_degree, 10.0)
+if employee.last_performace_obj:
+    result = result*employee.last_performace_obj.perf_percent*0.0100 ]]>
+            </field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_JBALW" model="hr.salary.rule">
+            <field name="name">Job Position Allowance</field>
+            <field name="sequence">14</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_position_allowance and employee.allowance_id.position_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">JBALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.position_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_TRANALW" model="hr.salary.rule">
+            <field name="name">Conveyance Allowance</field>
+            <field name="sequence">15</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_transport_allowance and employee.allowance_id.transport_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">TRANALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.transport_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_FLALW" model="hr.salary.rule">
+            <field name="name">Fuel Allowance</field>
+            <field name="sequence">16</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_fuel_allowance and employee.allowance_id.fuel_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">FLALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.fuel_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_PHNALW" model="hr.salary.rule">
+            <field name="name">Phone Allowance</field>
+            <field name="sequence">17</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_calling_allowance and employee.allowance_id.calling_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">PHNALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.calling_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_RSALW" model="hr.salary.rule">
+            <field name="name">House Rent Allowance</field>
+            <field name="sequence">18</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_res_allowance and employee.allowance_id.res_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">RSALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.res_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_CLTALW" model="hr.salary.rule">
+            <field name="name">Clothes Allowance</field>
+            <field name="sequence">19</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.chk_clothes_allowance and employee.allowance_id.clothes_allowance</field>
+            <field name="amount_select">code</field>
+            <field name="code">CLTALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.clothes_allowance</field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_FXALW" model="hr.salary.rule">
+            <field name="name">Fixed Allowance</field>
+            <field name="sequence">20</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">FXALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.allowance_id.fixed_allowance</field>
+        </record>
+        <record id="unlimited_full_structure_rule_MOTALW" model="hr.salary.rule">
+            <field name="name">Monthly Overtime Allowance</field>
+            <field name="sequence">23</field>
+            <field name="condition_select">python</field>
+            <field name="amount_select">code</field>
+            <field name="code">MOTALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="condition_python">result = employee.monthly_overtime</field>
+            <field name="amount_python_compute">
+try:
+    result = categories.BASIC + ANNALW
+    result = int(result / 30*1000)/1000
+    result = int(result / 7*1000)/1000
+    result = result * 2
+    result = result * employee.monthly_overtime
+except:
+    pass
+            </field>
+        </record>
+        <record id="unlimited_full_structure_rule_MREGALW" model="hr.salary.rule">
+            <field name="name">Monthly Regular Allowance</field>
+            <field name="sequence">24</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">MREGALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.monthly_regular</field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_OTALW" model="hr.salary.rule">
+            <field name="name">Overtime Allowance</field>
+            <field name="sequence">28</field>
+            <field name="condition_select">python</field>
+<!--            <field name="condition_python">result = worked_days.WORK100 and worked_days.WORK100.number_of_hours</field>-->
+            <field name="amount_select">code</field>
+            <field name="code">OTALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="condition_python">result = inputs.OT</field>
+            <field name="amount_python_compute">
+try:
+    result = categories.BASIC + ANNALW
+    result = int(result / 30*1000)/1000
+    result = int(result / 7*1000)/1000
+    result = result * 2
+    result = result * inputs.OT.amount
+except:
+    pass
+            </field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_OTHERALW" model="hr.salary.rule">
+            <field name="name">Other Allowance</field>
+            <field name="sequence">30</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.OTHERALW</field>
+            <field name="amount_select">code</field>
+            <field name="code">OTHERALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = inputs.OTHERALW.amount</field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_INSALW" model="hr.salary.rule">
+            <field name="name">Incentives</field>
+            <field name="sequence">31</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.INSALW</field>
+            <field name="amount_select">code</field>
+            <field name="code">INSALW</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = inputs.INSALW.amount</field>
+        </record>
+
+        <!-- Deduction -->
+
+        <record id="unlimited_full_structure_rule_ABSDED" model="hr.salary.rule">
+            <field name="name">Absent Deduction</field>
+            <field name="sequence">70</field>
+            <field name="condition_select">none</field>
+<!--            <field name="condition_python">result = worked_days.LEAVE90 and worked_days.LEAVE90.number_of_days</field>-->
+            <field name="amount_select">code</field>
+            <field name="code">ABSDED</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+result = categories.BASIC + categories.ANNALW
+result = int(result / 30*1000)/1000
+result = result * inputs.LEAV90]]></field>
+        </record>
+        <record id="unlimited_full_structure_rule_OTHERDED" model="hr.salary.rule">
+            <field name="name">Other Deduction</field>
+            <field name="sequence">71</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = inputs.OTHERDED</field>
+            <field name="amount_select">code</field>
+            <field name="code">OTHERDED</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = inputs.OTHERDED.amount</field>
+        </record>
+
+        <!-- Gross -->
+
+        <record id="unlimited_full_structure_rule_GROSS" model="hr.salary.rule">
+            <field name="name">Gross</field>
+            <field name="sequence">100</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">GROSS</field>
+            <field name="category_id" ref="hr_payroll.GROSS"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+try:
+    result = ABSDED
+except:
+    result = 0.00
+try:
+    result+=OTHERDED
+except:
+    pass
+result += categories.BASIC
+result += categories.ALW
+             ]]></field>
+        </record>
+
+        <!-- Deduction -->
+
+        <record id="unlimited_full_structure_rule_EPF" model="hr.salary.rule">
+            <field name="name">Employee Pension fund contribution</field>
+            <field name="sequence">110</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">EPF</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+result = categories.GROSS
+result += 0.00 if employee.company_id.inc_position_allowance else employee.allowance_id.position_allowance
+result += 0.00 if employee.company_id.inc_transport_allowance else employee.allowance_id.transport_allowance
+result += 0.00 if employee.company_id.inc_fuel_allowance else employee.allowance_id.fuel_allowance
+result += 0.00 if employee.company_id.inc_calling_allowance else employee.allowance_id.calling_allowance
+result += 0.00 if employee.company_id.inc_res_allowance else employee.allowance_id.res_allowance
+result += 0.00 if employee.company_id.inc_clothes_allowance else employee.allowance_id.clothes_allowance
+result = result * -0.0100 * employee.get_pf_employee_rate()]]>
+            </field>
+        </record>
+        <record id="unlimited_full_structure_rule_TDTAX" model="hr.salary.rule">
+            <field name="name">Tadamon Tax</field>
+            <field name="sequence">111</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.tadamon_tax_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">TDTAX</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = categories.GROSS * employee.company_id.tadamon_tax * -0.0100</field>
+        </record>
+        <record id="unlimited_full_structure_rule_JHDTX" model="hr.salary.rule">
+            <field name="name">Jhad Tax</field>
+            <field name="sequence">112</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.jhad_tax_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">JHDTX</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+result = categories.GROSS + EPF
+try:
+    result += TDTAX
+except:
+    pass
+result = result * employee.company_id.get_jhad_tax() * -0.0100]]>
+            </field>
+        </record>
+        <record id="unlimited_full_structure_rule_IT" model="hr.salary.rule">
+            <field name="name">Income Tax</field>
+            <field name="sequence">113</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.income_deduction</field>
+            <field name="amount_select">code</field>
+            <field name="code">IT</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute"><![CDATA[
+base = categories.GROSS
+try:
+    base +=TDTAX
+except:
+    pass
+try:
+    base += EPF
+except:
+    pass
+base = base - employee.family_allowance
+if base <=1000.00:
+    result = employee.company_id.upto_1000_deduction * 0.0100 * base
+else:
+    result = (employee.company_id.upto_1000_deduction * 0.0100 * 1000.00) + ((base - 1000.00) * employee.company_id.above_1000_deduction * 0.0100)
+result = result * -1.00  ]]>
+            </field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_INS" model="hr.salary.rule">
+            <field name="name">Health Insurance</field>
+            <field name="sequence">130</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.company_id.health_insurance_applicabe</field>
+            <field name="amount_select">code</field>
+            <field name="code">INS</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = employee.company_id.health_insurance_rate * employee.total_family * -1.000 </field>
+        </record>
+
+        <!-- NET SALARY -->
+
+        <record id="unlimited_full_structure_rule_NET" model="hr.salary.rule">
+            <field name="name">Net Salary</field>
+            <field name="sequence">200</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">NET</field>
+            <field name="category_id" ref="hr_payroll.NET"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = categories.BASIC + categories.ALW + categories.DED</field>
+        </record>
+
+        <!-- Contribuation -->
+
+        <record id="unlimited_full_structure_rule_ErPF" model="hr.salary.rule">
+            <field name="name">PF Employer primume</field>
+            <field name="sequence">210</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">ErPF</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">
+result = categories.GROSS
+result += 0.00 if employee.company_id.inc_position_allowance else employee.allowance_id.position_allowance
+result += 0.00 if employee.company_id.inc_transport_allowance else employee.allowance_id.transport_allowance
+result += 0.00 if employee.company_id.inc_fuel_allowance else employee.allowance_id.fuel_allowance
+result += 0.00 if employee.company_id.inc_calling_allowance else employee.allowance_id.calling_allowance
+result += 0.00 if employee.company_id.inc_res_allowance else employee.allowance_id.res_allowance
+result += 0.00 if employee.company_id.inc_clothes_allowance else employee.allowance_id.clothes_allowance
+result = result * -0.0100 * employee.get_pf_employer_rate()
+            </field>
+        </record>
+
+        <record id="unlimited_full_structure_rule_TM" model="hr.salary.rule">
+            <field name="name">Payment TAX</field>
+            <field name="sequence">211</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="code">TM</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="struct_id" ref="unlimited_full_time_employee"/>
+            <field name="amount_python_compute">result = (JHDTX + IT) * -0.005</field>
+        </record>
+
+    </data>
+</odoo>

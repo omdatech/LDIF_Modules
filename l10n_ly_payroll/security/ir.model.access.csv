@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_family,hr.family,model_hr_family,,1,1,1,1
+access_hr_degree,hr.degree,model_hr_degree,,1,1,1,1
+access_sk_sal_allowance,sk.sal.allowance,model_sk_sal_allowance,,1,1,1,1
+access_sk_sal_table,sk.sal.table,model_sk_sal_table,,1,1,1,1
+access_sk_performance_eval,sk.performance.eval,model_sk_performance_eval,,1,1,1,1

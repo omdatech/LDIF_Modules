@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+		<!-- fill-in data in Job Position table-->
+        <record id="job_chairman" model="hr.job">
+            <field name="name">رئيس مجلس الادارة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_vice_chairman" model="hr.job">
+            <field name="name">نائب رئيس مجلس الادارة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_board_member" model="hr.job">
+            <field name="name">عضو مجلس الادارة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_CEO" model="hr.job">
+            <field name="name">المدير العام</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_vice_CEO" model="hr.job">
+            <field name="name">نائب المدير العام</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_director" model="hr.job">
+            <field name="name">مدير إدارة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_hod" model="hr.job">
+            <field name="name">رئيس قسم</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_hoo" model="hr.job">
+            <field name="name">مدير مكتب</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_hou" model="hr.job">
+            <field name="name">رئيس وحدة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_tl" model="hr.job">
+            <field name="name">عضو فريق/لجنة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_team_member" model="hr.job">
+            <field name="name">عضو فريق/لجنة</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_consultant" model="hr.job">
+            <field name="name">مستشار</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="job_employee" model="hr.job">
+            <field name="name">موظف</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!-- JOB POSITION ALLOWANCE -->
+        <record id="allowance_chairman" model="sk.sal.allowance">
+            <field name="name">بدلات رئيس مجلس الادارة</field>
+            <field name="position_allowance">1500.000</field>
+            <field name="transport_allowance">0.000</field>
+            <field name="fuel_allowance">0.000</field>
+            <field name="calling_allowance">50.000</field>
+            <field name="clothes_allowance">0.000</field>
+            <field name="res_allowance">0.000</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_chairman"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_vice_chairman" model="sk.sal.allowance">
+            <field name="name">بدلات نائب رئيس مجلس الادارة</field>
+            <field name="position_allowance">1000.000</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">33.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_vice_chairman"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_board_member" model="sk.sal.allowance">
+            <field name="name">بدلات عضو مجلس الادارة</field>
+            <field name="position_allowance">1000</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">50.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_board_member"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_CEO" model="sk.sal.allowance">
+            <field name="name">بدلات المدير العام</field>
+            <field name="position_allowance">15000.00</field>
+            <field name="transport_allowance">250.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">50.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">1500.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_CEO"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_vice_CEO" model="sk.sal.allowance">
+            <field name="name">بدلات نائب المدير العام</field>
+            <field name="position_allowance">1000.00</field>
+            <field name="transport_allowance">250.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_vice_CEO"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_director" model="sk.sal.allowance">
+            <field name="name">بدلات مدير ادارة</field>
+            <field name="position_allowance">1000.00</field>
+            <field name="transport_allowance">250.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">30.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_director"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_hod" model="sk.sal.allowance">
+            <field name="name">بدلات رئيس قسم</field>
+            <field name="position_allowance">500.00</field>
+            <field name="transport_allowance">200.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_hod"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_hoo" model="sk.sal.allowance">
+            <field name="name">بدلات مدير مكتب</field>
+            <field name="position_allowance">500.00</field>
+            <field name="transport_allowance">250.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">30.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_hoo"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_hou" model="sk.sal.allowance">
+            <field name="name">بدلات مدير وحدة</field>
+            <field name="position_allowance">250.00</field>
+            <field name="transport_allowance">100.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_hou"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_tl" model="sk.sal.allowance">
+            <field name="name">بدلات رئيس فريق/لجنة</field>
+            <field name="position_allowance">250.00</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_tl"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_team_member" model="sk.sal.allowance">
+            <field name="name">بدلات عضو فريق/لجنة</field>
+            <field name="position_allowance">350.00</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_team_member"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_consultant" model="sk.sal.allowance">
+            <field name="name">بدلات مستشار</field>
+            <field name="position_allowance">750.00</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_consultant"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="allowance_employee" model="sk.sal.allowance">
+            <field name="name">بدلات موظف</field>
+            <field name="position_allowance">10.00</field>
+            <field name="transport_allowance">0.00</field>
+            <field name="fuel_allowance">0.00</field>
+            <field name="calling_allowance">0.00</field>
+            <field name="clothes_allowance">0.00</field>
+            <field name="res_allowance">0.00</field>
+<!--            <field name="overtime_allowance">8.00</field>-->
+            <field name="job_id" ref="job_employee"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!-- DEGREE TABLE -->
+        <record id="degree_first" model="hr.degree">
+            <field name="name">(1) الدرجة الاولى</field>
+        </record>
+        <record id="degree_second" model="hr.degree">
+            <field name="name">(2) الدرجة الثانية</field>
+        </record>
+        <record id="degree_third" model="hr.degree">
+            <field name="name">(3) الدرجة الثالثة</field>
+        </record>
+        <record id="degree_fourth" model="hr.degree">
+            <field name="name">(4) الدرجة الرابعة</field>
+        </record>
+        <record id="degree_fifth" model="hr.degree">
+            <field name="name">(5) الدرجة الخامسة</field>
+        </record>
+        <record id="degree_sixth" model="hr.degree">
+            <field name="name">(6) الدرجة السادسة</field>
+        </record>
+        <record id="degree_seventh" model="hr.degree">
+            <field name="name">(7) الدرجة السابعة</field>
+        </record>
+        <record id="degree_eighth" model="hr.degree">
+            <field name="name">(8) الدرجة الثامنة</field>
+        </record>
+        <record id="degree_ninth" model="hr.degree">
+            <field name="name">(9) الدرجة التاسعة</field>
+        </record>
+        <record id="degree_tenth" model="hr.degree">
+            <field name="name">(10) الدرجة العاشرة</field>
+        </record>
+        <record id="degree_eleventh" model="hr.degree">
+            <field name="name">(11) الدرجة الحادية عشر</field>
+        </record>
+        <record id="degree_twelfth" model="hr.degree">
+            <field name="name">(12) الدرجة الثانية عشر</field>
+        </record>
+        <record id="degree_thirteenth" model="hr.degree">
+            <field name="name">(13) الدرجة الثالثة عشر</field>
+        </record>
+        <record id="degree_fourteenth" model="hr.degree">
+            <field name="name">(14) الدرجة الرابعة عشر</field>
+        </record>
+
+        <!-- Salary Table -->
+        <record id="sal_table_first" model="sk.sal.table">
+            <field name="basic">825.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_first"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_sec" model="sk.sal.table">
+            <field name="basic">900.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_second"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_third" model="sk.sal.table">
+            <field name="basic">975.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_third"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_four" model="sk.sal.table">
+            <field name="basic">1050.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_fourth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_five" model="sk.sal.table">
+            <field name="basic">1350.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_fifth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_six" model="sk.sal.table">
+            <field name="basic">1500.000</field>
+            <field name="annual_allowance">40.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_sixth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_sev" model="sk.sal.table">
+            <field name="basic">1650.000</field>
+            <field name="annual_allowance">80.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_seventh"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_8" model="sk.sal.table">
+            <field name="basic">1800.000</field>
+            <field name="annual_allowance">80.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_eighth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_9" model="sk.sal.table">
+            <field name="basic">1950.000</field>
+            <field name="annual_allowance">80.000</field>
+            <field name="min_years_appraisal">4</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_ninth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_10" model="sk.sal.table">
+            <field name="basic">2100.000</field>
+            <field name="annual_allowance">80.000</field>
+            <field name="min_years_appraisal">5</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_tenth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_11" model="sk.sal.table">
+            <field name="basic">2400.000</field>
+            <field name="annual_allowance">120.000</field>
+            <field name="min_years_appraisal">5</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_eleventh"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_12" model="sk.sal.table">
+            <field name="basic">2700.000</field>
+            <field name="annual_allowance">120.000</field>
+            <field name="min_years_appraisal">5</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_twelfth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_13" model="sk.sal.table">
+            <field name="basic">3000.000</field>
+            <field name="annual_allowance">120.000</field>
+            <field name="min_years_appraisal">0</field>
+            <field name="max_years_appraisal">10</field>
+            <field name="emp_degree" ref="degree_thirteenth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="sal_table_14" model="sk.sal.table">
+            <field name="basic">0.00</field>
+            <field name="annual_allowance">0.000</field>
+            <field name="min_years_appraisal">0.00</field>
+            <field name="max_years_appraisal">0.00</field>
+            <field name="emp_degree" ref="degree_fourteenth"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!-- Performance -->
+
+        <record id="performance_poor" model="sk.performance.eval">
+            <field name="grade">poor</field>
+            <field name="perf_percent">0</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="performance_avge" model="sk.performance.eval">
+            <field name="grade">avge</field>
+            <field name="perf_percent">25</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="performance_good" model="sk.performance.eval">
+            <field name="grade">good</field>
+            <field name="perf_percent">60</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="performance_very" model="sk.performance.eval">
+            <field name="grade">very</field>
+            <field name="perf_percent">80</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+        <record id="performance_excellent" model="sk.performance.eval">
+            <field name="grade">excellent</field>
+            <field name="perf_percent">100</field>
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+        <!--        company information -->
+
+        <record id="base.main_company" model="res.company">
+            <field name="performance_emp_degree_ids"
+                   eval="[(6, 0, [ ref('l10n_ly_payroll.degree_first'),
+                                   ref('l10n_ly_payroll.degree_second'),
+                                   ref('l10n_ly_payroll.degree_third'),
+                                   ref('l10n_ly_payroll.degree_fourth'),
+                                   ref('l10n_ly_payroll.degree_fifth'),
+                                   ref('l10n_ly_payroll.degree_sixth'),
+                                   ref('l10n_ly_payroll.degree_seventh'),
+                                   ref('l10n_ly_payroll.degree_eighth'),
+                                   ref('l10n_ly_payroll.degree_ninth'),
+                                   ref('l10n_ly_payroll.degree_tenth')])]"/>
+<!--            <field name="phone" ref="00218213776688"/>-->
+<!--            <field name="street" ref="ابونواس"/>-->
+<!--            <field name="street2" ref="طريق قرقارش-السياحية"/>-->
+<!--            <field name="country_id" ref="base.ly"/>-->
+<!--            <field name="currency_id" ref="base.LYD"/>-->
+<!--            <field name="email" ref="info@ldif.gov.ly"/>-->
+<!--            <field name="city" ref="طرابلس"/>-->
+<!--            <field name="website" ref="www.ldif.gov.ly"/>-->
+<!--            <field name="zip" ref="N/A"/>-->
+<!--            <field name="name" ref="صندوق ضمان أموال المودعين"/>-->
+<!--            <field name="partner_id" ref="main_partner"/>-->
+<!--            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>-->
+        </record>
+<!--        <record id="main_partner" model="res.partner">-->
+<!--            <field name="company_id" ref="base.main_company"/>-->
+<!--        </record>-->
+
+        
+    </data>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Contribution Register -->
+	<data noupdate="1">
+
+
+    <!--    Social security fund-->
+        <record id="hr_register_SSFR" model="res.partner">
+            <field name="name">Social security fund (SSF) Register</field>
+        </record>
+
+    <!--    Taxes authority -->
+        <record id="hr_register_TAR" model="res.partner">
+            <field name="name">Taxes Authority Register</field>
+        </record>
+
+        <record id="hr_tadamon_tax_register" model="res.partner">
+            <field name="name">Tadamon Fund Register</field>
+        </record>
+
+        <record id="hr_allowances_register" model="res.partner">
+            <field name="name">All Allowances Register</field>
+        </record>
+
+        <record id="hr_health_insurance_register" model="res.partner">
+            <field name="name">Health Insurance Register</field>
+        </record>
+
+        <record id="hr_employees_loans_register" model="res.partner">
+            <field name="name">Employees Loans Register</field>
+        </record>
+
+        <record id="hr_salary_register" model="res.partner">
+            <field name="name">Employees Salaries Register</field>
+        </record>
+    </data>
+</odoo>

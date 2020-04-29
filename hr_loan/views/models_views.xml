@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+        <record id="view_hr_loan_form" model="ir.ui.view">
+            <field name="name">employee.loan</field>
+            <field name="model">employee.loan</field>
+            <field name="arch" type="xml">
+                <form string="Loan">
+                    <header>
+                        <button string="Confirm" name="action_confirm_loan" type="object" states="draft" class="oe_highlight" groups="hr.group_hr_user" />
+                        <button string="Reject" name="action_reject_loan" type="object" states="draft" class="oe_highlight" groups="hr.group_hr_user" />
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="employee_id" required="1"/>
+                                <field name="loan_amt" required="1"/>
+                                <field name="tennure" required="1"/>
+                            </group>
+                            <group>
+                                <field name="request_date" required="1" />
+                                <field name="start_date" required="1" />
+                                <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" />
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Installment Details">
+                                <field name="installment_lines">
+                                    <tree string="Installment" editable="bottom">
+                                        <field name="start_date" />
+                                        <field name="amount" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="view_hr_loan_tree" model="ir.ui.view">
+            <field name="name">employee.loan</field>
+            <field name="model">employee.loan</field>
+            <field name="arch" type="xml">
+                <tree string="Loan">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="request_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_hr_loan_settings" model="ir.actions.act_window">
+            <field name="name">Employee Loan</field>
+            <field name="res_model">employee.loan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="view_hr_loan_tree"/>
+        </record>
+
+
+        <menuitem id="menu_view_hr_loan" action="action_hr_loan_settings" parent="hr.menu_hr_root" sequence="11" groups="base.group_system"/>
+
+
+        <!-- Employee Inherit -->
+        <record id="view_new_employee_form_inherited" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+               <div name="button_box" position="inside">
+                    <button name="return_action_to_open_loan"
+                        class="oe_stat_button"
+                        icon="fa-list"
+                        type="object">
+                        <field name="loan_count" widget="statinfo" string="Loans"/>
+                    </button>
+                </div>
+            </field>
+        </record>
+
+
+</odoo>
+

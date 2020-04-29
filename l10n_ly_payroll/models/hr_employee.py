@@ -161,7 +161,7 @@ class HrEmployeePrivate(models.Model):
 
     family_ids = fields.One2many("hr.family", "employee_id", "Family Members")
     family_allowance = fields.Float(compute="_compute_family_allowance", string="Family Allowance")
-    emp_degree = fields.Many2one("hr.degree", "Managerial Degree", required=True)
+    emp_degree = fields.Many2one("hr.degree", "Managerial Degree") # , required=True)
     years_degree = fields.Integer("Years Since Last Degree")
     degree_note = fields.Char("Note")
     no_family = fields.Integer("No of Family Members Eligible for Tax Exempt", compute="_compute_degree_date")

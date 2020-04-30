@@ -19,7 +19,7 @@
         'views/hr_employee_views.xml',
         'views/hr_payroll_structure_views.xml',
         'views/res_company_views.xml',
-        "data/banks_data.xml",
+        # "data/banks_data.xml",
         "data/payroll_data.xml",
         "data/full_time_employee_data.xml",
         "data/limited_full_time_employee_data.xml",

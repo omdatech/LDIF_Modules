@@ -12,6 +12,7 @@ from odoo.exceptions import UserError, ValidationError
 
 class resCompany(models.Model):
     _inherit = "res.company"
+    _description = "Update company model"
 
 
     def write(self, vals):
@@ -55,20 +56,20 @@ class resCompany(models.Model):
 
 
 
-    position_allowance = fields.Boolean("Job Position Allowance", default=True)
-    transport_allowance = fields.Boolean("Conveyance Allowance", default=True)
-    fuel_allowance = fields.Boolean("Fuel Allowance", default=True)
-    calling_allowance = fields.Boolean("Calling Allowance", default=True)
-    res_allowance = fields.Boolean("House Rent Allowance", default=True)
-    clothes_allowance = fields.Boolean("Clothes Allowance", default=True)
+    position_allowance = fields.Boolean("Job Position Allowance.", default=True)
+    transport_allowance = fields.Boolean("Conveyance Allowance.", default=True)
+    fuel_allowance = fields.Boolean("Fuel Allowance.", default=True)
+    calling_allowance = fields.Boolean("Calling Allowance.", default=True)
+    res_allowance = fields.Boolean("House Rent Allowance.", default=True)
+    clothes_allowance = fields.Boolean("Clothes Allowance.", default=True)
 
 
-    inc_position_allowance = fields.Boolean("Include in SSF Calculation", default=True)
-    inc_transport_allowance = fields.Boolean("Include in SSF Calculation", default=True)
-    inc_calling_allowance = fields.Boolean("Include in SSF Calculation", default=True)
-    inc_clothes_allowance = fields.Boolean("Include in SSF Calculation", default=True)
-    inc_res_allowance = fields.Boolean("Include in SSF Calculation", default=True)
-    inc_fuel_allowance = fields.Boolean("Include in SSF Calculation", default=True)
+    inc_position_allowance = fields.Boolean("Include in SSF Calculation ", default=True)
+    inc_transport_allowance = fields.Boolean("Include in SSF Calculation  ", default=True)
+    inc_calling_allowance = fields.Boolean("Include in SSF Calculation   ", default=True)
+    inc_clothes_allowance = fields.Boolean("Include in SSF Calculation   ", default=True)
+    inc_res_allowance = fields.Boolean("Include in SSF Calculation    ", default=True)
+    inc_fuel_allowance = fields.Boolean("Include in SSF Calculation     ", default=True)
 
 
 

@@ -36,7 +36,7 @@ class Employee(models.Model):
             return emi
 
 
-    loan_count = fields.Integer(compute='_compute_loan_count', string='Contract Count')
+    loan_count = fields.Integer(compute='_compute_loan_count', string='Loan Count')
     loan_lines = fields.One2many("loan.installement", "employee_id", string="Loan")
 
 

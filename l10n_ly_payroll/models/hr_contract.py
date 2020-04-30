@@ -55,8 +55,8 @@ class HrContract(models.Model):
             self.structure_type_id = structure_type_id
             self.name = "Contract:%s-%s"%(self.employee_id.name, dd)
 
-
-
+            
+            
     @api.onchange('degree_id')
     def _onchange_degree_id(self):
         basic = 0.00

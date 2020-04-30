@@ -19,6 +19,7 @@ GRADE = {
 
 class SkSalAllowance(models.Model):
     _name = "sk.sal.allowance"
+    _description = "Update Allowances Table model"
 
     name = fields.Char("Allowance Name", translate=True)
     position_allowance = fields.Float("Position Allowance")
@@ -36,6 +37,7 @@ class SkSalAllowance(models.Model):
 class SkSalTable(models.Model):
     _name = "sk.sal.table"
     _rec_name = "emp_degree"
+    _description = "Update Salary Table model"
 
 
     emp_degree = fields.Many2one("hr.degree", "Degree", required=True)
@@ -57,6 +59,7 @@ class SkSalTable(models.Model):
 
 class HrFamily(models.Model):
     _name = "hr.family"
+    _description = "Update Family Table model"
 
 
     employee_id = fields.Many2one("hr.employee", "Employee")
@@ -91,6 +94,7 @@ class HrFamily(models.Model):
 
 class HrDegree(models.Model):
     _name = "hr.degree"
+    _description = "Update Degree Table model"
 
     name = fields.Char("Name", required=True)
 
@@ -107,6 +111,7 @@ class HrDegree(models.Model):
 
 class SkPerformanceEval(models.Model):
     _name = "sk.performance.eval"
+    _description = "Update Performance Table model"
 
     def name_get(self):
         return [(value.id, "%s : %s" % (GRADE.get(value.grade, ""), value.perf_percent)) for value in self]

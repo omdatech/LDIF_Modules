@@ -14,6 +14,7 @@ from dateutil.relativedelta import relativedelta
 
 class Employee(models.Model):
     _inherit = "hr.employee"
+    _description = "Update Employee model"
 
 
     def _compute_loan_count(self):
@@ -55,6 +56,7 @@ class Employee(models.Model):
 class employeeLoan(models.Model):
     _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
     _name = "employee.loan"
+    _description = "Update Empoly Loan model"
 
 
     def action_confirm_loan(self):
@@ -112,6 +114,7 @@ class employeeLoan(models.Model):
 
 class loanInstallement(models.Model):
     _name = "loan.installement"
+    _description = "Update Loan Installment model"
 
     employee_id = fields.Many2one("hr.employee", string="Employee")
     loan_id = fields.Many2one("employee.loan", string="Loan")

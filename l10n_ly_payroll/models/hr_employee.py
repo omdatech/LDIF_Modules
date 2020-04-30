@@ -14,6 +14,7 @@ from dateutil.relativedelta import relativedelta
 
 class HrEmployeePrivate(models.Model):
     _inherit = "hr.employee"
+    _description = "Update Employee model"
 
 
     def get_pf_employee_rate(self):
@@ -167,13 +168,13 @@ class HrEmployeePrivate(models.Model):
     no_family = fields.Integer("No of Family Members Eligible for Tax Exempt", compute="_compute_degree_date")
     total_family = fields.Integer("No of Family Members included for Health Insurance Installment", compute="_compute_degree_date")
     
-    chk_position_allowance = fields.Boolean("Job Position Allowance")
-    chk_transport_allowance = fields.Boolean("Transport Allowance")
-    chk_calling_allowance = fields.Boolean("Calling Allowance")
-    chk_clothes_allowance = fields.Boolean("Clothes Allowance")
-    chk_res_allowance = fields.Boolean("Residential Allowance")
-    chk_fuel_allowance = fields.Boolean("Fuel Allowance")
-    chk_fixed_allowance = fields.Boolean("Fixed Allowance")
+    chk_position_allowance = fields.Boolean("Job Position Allowance Applicable")
+    chk_transport_allowance = fields.Boolean("Transport Allowance Applicable")
+    chk_calling_allowance = fields.Boolean("Calling Allowance Applicable")
+    chk_clothes_allowance = fields.Boolean("Clothes Allowance Applicable")
+    chk_res_allowance = fields.Boolean("Residential Allowance Applicable")
+    chk_fuel_allowance = fields.Boolean("Fuel Allowance Applicable")
+    chk_fixed_allowance = fields.Boolean("Fixed Allowance Applicable")
 
 
     position_allowance = fields.Boolean("Job Position Allowance", related='company_id.position_allowance')

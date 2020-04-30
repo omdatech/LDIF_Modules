@@ -418,13 +418,13 @@
 <!--            <field name="phone" ref="00218213776688"/>-->
 <!--            <field name="street" ref="ابونواس"/>-->
 <!--            <field name="street2" ref="طريق قرقارش-السياحية"/>-->
-<!--            <field name="country_id" ref="base.ly"/>-->
-<!--            <field name="currency_id" ref="base.LYD"/>-->
+            <field name="country_id" ref="base.ly"/>
+            <field name="currency_id" ref="base.LYD"/>
 <!--            <field name="email" ref="info@ldif.gov.ly"/>-->
 <!--            <field name="city" ref="طرابلس"/>-->
 <!--            <field name="website" ref="www.ldif.gov.ly"/>-->
 <!--            <field name="zip" ref="N/A"/>-->
-<!--            <field name="name" ref="صندوق ضمان أموال المودعين"/>-->
+            <field name="name" ref="صندوق ضمان أموال المودعين"/>
 <!--            <field name="partner_id" ref="main_partner"/>-->
 <!--            <field name="favicon" model="res.company" eval="obj()._get_default_favicon(original=True)"/>-->
         </record>

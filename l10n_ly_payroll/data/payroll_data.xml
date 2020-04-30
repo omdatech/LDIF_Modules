@@ -37,7 +37,7 @@
             <field name="regular_pay" eval="True"/>
             <field name="country_id" eval="False"/>
             <field name="rule_ids" eval="[(6, 0, [])]"/>
-            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+            <!-- <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/> -->
         </record>
 
         
@@ -53,7 +53,7 @@
             <field name="regular_pay" eval="True"/>
             <field name="country_id" eval="False"/>
             <field name="rule_ids" eval="[(6, 0, [])]"/>
-            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+            <!-- <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/> -->
         </record>
         
         <!-- structure type -->
@@ -68,7 +68,7 @@
             <field name="regular_pay" eval="True"/>
             <field name="country_id" eval="False"/>
             <field name="rule_ids" eval="[(6, 0, [])]"/>
-            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+            <!-- <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/> -->
         </record>
 
         <!-- structure type -->
@@ -83,7 +83,7 @@
             <field name="regular_pay" eval="True"/>
             <field name="country_id" eval="False"/>
             <field name="rule_ids" eval="[(6, 0, [])]"/>
-            <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/>
+           <!-- <field name="input_line_type_ids" eval="[(6, 0, [ ref('structure_OTHERALW_type'), ref('structure_INSALW_type'), ref('structure_OTHERDED_type'), ref('structure_OT_type'), ref('structure_EXPENSES_type')])]"/> -->
         </record>
 
     </data>

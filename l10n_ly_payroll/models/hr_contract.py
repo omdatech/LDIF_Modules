@@ -12,7 +12,7 @@ from odoo.exceptions import UserError, ValidationError
 
 class HrContract(models.Model):
     _inherit = "hr.contract"
-     _description = "modify employee contract"
+    _description = "modify employee contract"
 
 
     @api.onchange('employee_id')

@@ -67,7 +67,7 @@ class resCompany(models.Model):
     inc_position_allowance = fields.Boolean("Include in SSF Calculation ", default=True)
     inc_transport_allowance = fields.Boolean("Include in SSF Calculation  ", default=True)
     inc_calling_allowance = fields.Boolean("Include in SSF Calculation   ", default=True)
-    inc_clothes_allowance = fields.Boolean("Include in SSF Calculation   ", default=True)
+    inc_clothes_allowance = fields.Boolean("Include in SSF Calculation", default=True)
     inc_res_allowance = fields.Boolean("Include in SSF Calculation    ", default=True)
     inc_fuel_allowance = fields.Boolean("Include in SSF Calculation     ", default=True)
 

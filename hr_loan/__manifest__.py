@@ -18,5 +18,5 @@
         'views/models_views.xml',
         ],
     'installable': True,
-    'application': True
+    'application': False
 }

@@ -22,7 +22,7 @@
         <record id="structure_EXPENSES_type" model="hr.payslip.input">
             <field name="name">Expenses</field>
             <field name="code">EX</field>
-        </record>
+        </record> -->
 
         <!-- structure type -->
         <record id="contract_employee_type" model="hr.payroll.structure.type">

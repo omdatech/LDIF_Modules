@@ -43,13 +43,8 @@
                 </xpath>
                 <field name="parent_id" position="after">
                     <field name="employment_type"/>
-                </field>
-
-                <field name="registration_number" position="after">
                     <field name="retired_employee"/>
                 </field>
-                
-                
 
                 <xpath expr="//notebook/page[@name='personal_information']/group/group[3]" position="attributes">
                     <attribute name="invisible">1</attribute>

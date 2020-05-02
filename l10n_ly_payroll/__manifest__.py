@@ -8,10 +8,11 @@
     'name': 'Payroll Localization',
     'summary': 'Customisation in Payroll, Localization for Libya',
     'sequence': 1,
+    'version': 1.0.1,
     'category': 'Backend',
     'author': "rupamodoo",
     'website': 'https://www.freelancer.com/u/Rupamodoo.html',
-    'depends': ["hr_payroll", "hr_payroll_expense", "hr_holidays_attendance", "account_accountant", "hr_skills", "hr_loan", "hr_holidays"],
+    'depends': ["hr_payroll", "hr_payroll_expense", "hr_holidays_attendance", "account_accountant", "hr_skills", "hr_loan", "hr_holidays", "studio"],
     'data': [
         'security/payroll_security.xml',
         'security/ir.model.access.csv',

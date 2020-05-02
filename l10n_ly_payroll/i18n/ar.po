@@ -155,12 +155,12 @@ msgstr "ابنة"
 #. module: l10n_ly_payroll
 #: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__above_1000_deduction
 msgid "Deduction % Above 1000"
-msgstr "نسبة الخصم من قيمة المرتب (أول 1000 د.ل)"
+msgstr "نسبة الخصم من قيمة المرتب (بعد 1000 د.ل)"
 
 #. module: l10n_ly_payroll
 #: model:ir.model.fields,field_description:l10n_ly_payroll.field_res_company__upto_1000_deduction
 msgid "Deduction % Upto 1000"
-msgstr "نسبة الخصم من قيمة المرتب (بعد 1000 د.ل)"
+msgstr "نسبة الخصم من قيمة المرتب (أول 1000 د.ل)"
 
 #. module: l10n_ly_payroll
 #: model:ir.actions.act_window,name:l10n_ly_payroll.action_hr_degree

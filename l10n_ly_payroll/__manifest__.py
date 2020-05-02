@@ -8,7 +8,7 @@
     'name': 'Payroll Localization',
     'summary': 'Customisation in Payroll, Localization for Libya',
     'sequence': 1,
-    'version': 1.0.1,
+    'version': '1.0.1',
     'category': 'Backend',
     'author': "rupamodoo",
     'website': 'https://www.freelancer.com/u/Rupamodoo.html',

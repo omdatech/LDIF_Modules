@@ -8,7 +8,7 @@
     'name': 'Payroll Localization',
     'summary': 'Customisation in Payroll, Localization for Libya',
     'sequence': 1,
-    'version': '1.0.1',
+    'version': '13.0.1.1.0', # Odoo version 13.0, data model / view, module upgrades needed, bug fixed
     'category': 'Backend',
     'author': "rupamodoo",
     'website': 'https://www.freelancer.com/u/Rupamodoo.html',

@@ -12,7 +12,7 @@
     'category': 'Backend',
     'author': "rupamodoo",
     'website': 'https://www.freelancer.com/u/Rupamodoo.html',
-    'depends': ["hr_payroll", "hr_payroll_expense", "hr_holidays_attendance", "account_accountant", "hr_skills", "hr_loan", "hr_holidays", "studio"],
+    'depends': ["hr_payroll", "hr_payroll_expense", "hr_holidays_attendance", "account_accountant", "hr_skills", "hr_loan", "hr_holidays", "web_studio"],
     'data': [
         'security/payroll_security.xml',
         'security/ir.model.access.csv',

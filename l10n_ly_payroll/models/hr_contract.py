@@ -57,7 +57,7 @@ class HrContract(models.Model):
 
             
             
-    @api.onchange('degree_id')
+    # @api.onchange('degree_id')
     def _onchange_degree_id(self):
         basic = 0.00
         annual_allowance = 0.00

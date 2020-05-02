@@ -54,7 +54,7 @@ class Employee(models.Model):
 
 
 class employeeLoan(models.Model):
-    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin', 'utm.mixin']
+    _inherit = ['portal.mixin', 'mail.thread', 'mail.activity.mixin'] # , 'utm.mixin']
     _name = "employee.loan"
     _description = "Update Empoly Loan model"
 

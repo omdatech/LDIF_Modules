@@ -327,6 +327,17 @@ result = result * -1.00
             <field name="struct_id" ref="full_time_employee"/>
             <field name="amount_python_compute">result = employee.company_id.health_insurance_rate * employee.total_family * -1.000 </field>
         </record>
+        <record id="full_structure_rule_LOAN" model="hr.salary.rule">
+            <field name="name">Loan Type 1</field>
+            <field name="sequence">160</field>
+            <field name="condition_select">python</field>
+            <field name="condition_python">result = employee.get_installment(payslip.date_from, payslip.date_to)</field>
+            <field name="amount_select">code</field>
+            <field name="code">LOAN1</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="struct_id" ref="full_time_employee"/>
+            <field name="amount_python_compute">result = employee.get_installment(payslip.date_from, payslip.date_to) * -1.0000</field>
+        </record>
 
         <!-- NET SALARY -->
 
